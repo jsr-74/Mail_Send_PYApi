@@ -4,7 +4,10 @@ from email.message import EmailMessage
 import base64
 import os
 import re
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)   # ✅ ADD THIS LINE
 
 
 SENDER_EMAIL = os.getenv("SENDER_EMAIL") # Get sender email from environment variable
